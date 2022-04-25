@@ -17,9 +17,14 @@ def main_page():
             z = i.text_input('', key=f'{_}{i}+1')
             stolb.append(z)
         strok.append(stolb)
+    for i in range(len(strok[0])):
+        z =[]
+        for _ in range(len(strok)):
+            z.append(strok[_][i])
+        matrix.append(z)
     count_iter = st.number_input('Количество итераций', step=1, min_value=1)
     try:
-        main.culc(strok, count_iter)
+        main.culc(matrix, int(count_iter))
     except:
         st.subheader('Введены не все значения!')
     hide_streamlit_style = """
