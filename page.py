@@ -7,7 +7,7 @@ def main_page():
     st.header('Итеративный метод')
     col_1,col_2 = st.columns(2)
     stolb =col_1.number_input('Количество стобцов', step=1, min_value=1, key='stolb')
-    stroks = col_2.number_input('Количество строк', step=1, min_value=1 key = 'stork')
+    stroks = col_2.number_input('Количество строк', step=1, min_value=1, key = 'stork')
     strok = []
 
     st.subheader('Платежная матрица')
