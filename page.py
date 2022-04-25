@@ -6,8 +6,8 @@ import main
 def main_page():
     st.header('Итеративный метод')
     col_1,col_2 = st.columns(2)
-    stolb =col_1.slider('Количество столбцов',1, 100, key = 'stolb')
-    stroks = col_2.slider('Количество строк',1, 100, key = 'stork')
+    stolb =col_1.number_input('Количество стобцов', step=1, min_value=1, key='stolb')
+    stroks = col_2.number_input('Количество строк', step=1, min_value=1 key = 'stork')
     strok = []
 
     st.subheader('Платежная матрица')
