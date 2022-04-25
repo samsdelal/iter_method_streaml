@@ -9,7 +9,7 @@ def main_page():
     stolb =col_1.number_input('Количество стобцов', step=1, min_value=1, key='stolb')
     stroks = col_2.number_input('Количество строк', step=1, min_value=1, key = 'stork')
     strok = []
-
+    matriz = []
     st.subheader('Платежная матрица')
     for i in st.columns(int(stolb)):
         stolb = []
@@ -21,10 +21,10 @@ def main_page():
         z =[]
         for _ in range(len(strok)):
             z.append(strok[_][i])
-        matrix.append(z)
+        matriz.append(z)
     count_iter = st.number_input('Количество итераций', step=1, min_value=1)
     try:
-        main.culc(matrix, int(count_iter))
+        main.culc(matriz, int(count_iter))
     except:
         st.subheader('Введены не все значения!')
     hide_streamlit_style = """
