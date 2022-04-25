@@ -17,7 +17,7 @@ def main_page():
             z = i.text_input('', key=f'{_}{i}+1')
             stolb.append(z)
         strok.append(stolb)
-    count_iter = st.slider('Количество итераций', 1, 10000)
+    count_iter = st.number_input('Количество итераций', step=1, min_value=1)
     try:
         main.culc(strok, count_iter)
     except:
