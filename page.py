@@ -22,7 +22,7 @@ def main_page():
         for _ in range(len(strok)):
             z.append(strok[_][i])
         matriz.append(z)
-    count_iter = st.number_input('Количество итераций', step=1, min_value=1)
+    count_iter = st.number_input('Количество итераций', step=1, min_value=1, max_value = 10000000)
     try:
         main.culc(matriz, int(count_iter))
     except:
